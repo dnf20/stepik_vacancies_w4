@@ -1,0 +1,9 @@
+{% extends 'base.html' %}
+{% block container %}
+<main class="container mt-3">
+    <section>
+        {% load crispy_forms_tags %}
+        {% crispy form %}
+    </section>
+</main>
+{% endblock %}

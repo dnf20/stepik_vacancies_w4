@@ -1,0 +1,14 @@
+{% extends 'base.html' %}
+
+{% block container %}
+<main class="container mt-3">
+    <section>
+        {% load crispy_forms_tags %}
+        <form method="post" action="/register/">
+            {% csrf_token %}
+            {{ form|crispy }}
+            <button class="btn btn-primary" type="submit">Зарегистрироваться</button>
+        </form>
+    </section>
+</main>
+{% endblock %}
